@@ -1,0 +1,9 @@
+.posts-div li {
+  list-style: none;
+  text-align: left;
+  border-bottom: 1px dashed #ccc;
+  margin-bottom: 5px;
+}
+.posts-div .post-title {
+  font-weight: 600;
+}

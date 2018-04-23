@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="add-new-post">
+    <button type="button" class="button" @click="openModal(true)">Add New Post</button>
+  </div>
+  <post-form v-on:closeModel="closeModal" v-bind:showModal="showModal" v-bind:modalPost="modalPost"></post-form>
+  <div v-for="post in posts" :key="post.id">
+    <div class="col-md-8">
+      <post-detail v-bind:post="post"></post-detail>
+    </div>
+    <div class="col-md-4 edit-btn">
+      <button type="button" class="button" @click="openModal(true, post)">Edit Post</button>
+      <button type="button" class="button" @click="deletePost(post.id)">Delete Post</button>
+    </div>
+  </div>
+</div>
